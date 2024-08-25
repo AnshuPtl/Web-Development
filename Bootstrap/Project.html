@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Shoppy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+   
+    <script>
+        window.onload = function(){
+            document.getElementById('autoClickBtn').click();
+        }
+
+        jQuery(function(){
+            jQuery('#showall').click(function(){
+               jQuery('.targetDiv').show();
+            });
+            jQuery('.showSingle').click(function(){
+              jQuery('.targetDiv').hide();
+              jQuery('#div'+$(this).attr('target')).show();
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+
+        .social-nav {
+            padding: 0;
+            list-style: none;
+            display: inline-block;
+            margin: 1em 0 0;
+        }
+        .social-nav li {
+            display: inline-block;
+            margin: 0 6px;
+        }
+        .social-nav a {
+            display: inline-block;
+            float: none;
+            width: 30px;
+            height: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 30px;
+            background: #000;
+            position: relative;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+        .model-3d-0 a {
+            background:#5C5B5B;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        .model-3d-0 .front, .model-3d-0 .back {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform: translateZ(18px);
+            -moz-transform: translateZ(18px);
+            -ms-transform: translateZ(18px);
+            -o-transform: translateZ(18px);
+            transform: translateZ(18px);
+            -webkit-backface-visibility: visible;
+            -moz-backface-visibility: visible;
+            -ms-backface-visibility: visible;
+            -o-backface-visibility: visible;
+            backface-visibility: visible;
+            color:#212121;
+            font-size:12px;
+        }
+        .model-3d-0 .back {
+            -webkit-transform: rotateX(90deg) translateZ(18px);
+            -moz-transform: rotateX(90deg) translateZ(18px);
+            -ms-transform: rotateX(90deg) translateZ(18px);
+            -o-transform: rotateX(90deg) translateZ(18px);
+            transform: rotateX(90deg) translateZ(18px);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        a.twitter .front {
+            background: #00acee;
+        }
+        a.facebook .front {
+            background: #3b5998;
+        }
+        a.instagram .front {
+            background: #f77737;
+        }
+        a.pinterest .front {
+            background: #bd081c;
+        }
+        .twitter .back,.facebook .back,.instagram .back,.pinterest .back{
+            background:#fff;
+        }
+        .model-3d-0 a:hover {
+            -webkit-transform: rotateX(-90deg);
+            -moz-transform: rotateX(-90deg);
+            -ms-transform: rotateX(-90deg);
+            -o-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+        }
+        .model-3d-0 a:hover .back {
+            -webkit-backface-visibility: visible;
+            -moz-backface-visibility: visible;
+            -ms-backface-visibility: visible;
+            -o-backface-visibility: visible;
+            backface-visibility: visible;
+        }
+        .w3_agile_social .front i{
+            color: #fff;
+            font-size: 12px;
+        }
+        .w3_agile_social .back i{
+            color: #000;
+            font-size: 12px;
+        }
+        .w3ls_team_grid img {
+            background: #e4e3e3;
+            padding: 7px;
+        }
+        /*--social icons--*/
+        /* Brand Colours */
+        .facebook{
+            background: #3b5998;
+        }
+        .twitter{
+            background: #00acee;
+        }
+        .google-plus{
+            background:#dd4b39;
+        }
+        .rss{
+            background:#f26522;
+        }
+        .social-icon-w3-agile {
+            width: 25%;
+            float: left;
+            text-align: center;
+            padding:1.5em 0;
+        }
+        .social-icon-w3-agile i {
+            color: #fff;
+            font-size:28px;
+        }
+        .social-agileinfo a:hover {
+            opacity: 0.8;
+        }
+        li.share {
+            vertical-align: super;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        /*--social-icons--*/
+        .logo_agile {
+            text-align: center;
+        }
+        .logo_agile span {
+            background: #000;
+            padding: 0 17px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .logo_agile h1 a {
+            font-weight: 300;
+            color: #000;
+            letter-spacing: 1px;
+            font-size: 1.5em;
+            position:relative;
+        }
+        .logo_agile h1 a:hover {
+        text-decoration:none;
+        }
+        i.fa.fa-shopping-bag.top_logo_agile_bag {
+            position: absolute;
+            font-size: 17px;
+            top: 66px;
+            right: 14px;
+            color: #2fdab8;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .backgr {
+            background: url(banner3.jpg)no-repeat 0px 0px;
+            background-attachment: fixed;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -ms-background-size: cover;
+            min-height: 400px;
+        }
+
+        button.w3view-cart {
+    outline: none;
+    border: none;
+    background: #17c3a2;
+    width: 48px;
+    height: 43px;
+    font-size: 24px;
+    color: #000;
+}
+    
+.pi {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+    color: white;
+    font-size: x-large;
+    padding: 5%;
+    transition-property: color;
+    transition-duration: 0.5s;
+    float: left;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    
+}
+.pi :hover{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2fdab8;
+}
+    .ad{
+        float: left;
+        padding-left: 15px;
+        padding-right: 25px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid" method="post">
+        <div class="row"  style="background-color: black;">
+            <div class="col-md-3 text-center"><a href="www.facebook.com" class="text-light text-decoration-none"><i class="fa fa-unlock-alt" aria-hidden="true" style="color: turquoise;"></i>   Sign In</a></div>
+            <div class="col-md-3 text-center"><a href="#" class="text-light text-decoration-none"><i class="fa fa-pencil-square-o" aria-hidden="true" style="color: turquoise;"></i>   Sign Up</a></div>
+            <div class="col-md-3 text-center"><a href="#" class="text-light text-decoration-none"><i class="fa fa-phone" aria-hidden="true" style="color: turquoise;"></i>   Call : 01234567898</a></div>
+            <div class="col-md-3 text-center"><a href="#" class="text-light text-decoration-none"><i class="fa fa-envelope-o" aria-hidden="true" style="color: turquoise;"></i>   info@examle.com</a></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <form action="#">
+                        <input type="search" name="search" style="width: 70%; height: 45px;" placeholder="Search here...">
+                        <button type="submit"><i class="fa fa-search bg-secondary" style="background-color: turquoise;"></i></button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h1><a href="#" class="text-dark text-decoration-none"><span style="background: #000; padding: 0 17px; font-weight: bold; color: #fff;">E</span>lite Shoppy <i class="fa fa-shopping-bag" aria-hidden="true" style="color: turquoise;"></i></a></h1>
+            </div>
+            <div class="col-md-4 agileits-social top_content">
+                <ul class="social-nav model-3d-0 footer-social w3_agile_social">
+                    <li class="share">Share On : </li>
+                    <li><a href="#" class="facebook">
+                        <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
+                    </li>
+                    <li><a href="#" class="twitter"> 
+                        <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
+                    </li>
+                    <li><a href="#" class="instagram">
+                        <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a>
+                    </li>
+                    <li><a href="#" class="pinterest">
+                        <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+        <div class="row" style="background-color: black;">
+            <div class="col-md-12">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="bs">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link text-decoration-none text-light" data-toggle="dropdown" href="#">Men's wear<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Page 1-1</a></li>
+                              <li><a href="#">Page 1-2</a></li>
+                              <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link text-decoration-none text-light" data-toggle="dropdown" href="#">Women's wear</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link text-decoration-none text-light" data-toggle="dropdown" href="#">Short Codes</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top_nav_right">
+                    <div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
+                        <form action="#" method="post" class="last"> 
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="display" value="1">
+                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                        </form>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           
+    <div id="demo" class="carousel slide" data-ride="carousel">
+  
+  
+        <div class="carousel-inner">
+             
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+        
+          <div class="carousel-item active">
+            <img src="banner1.jpg" width="100%" height="auto">
+            <div class="carousel-caption">
+                <h3 style="color: white; font-family: 'Open Sans', sans-serif; letter-spacing: 10px; font-weight: 700; font-size: 350%; margin-bottom: 0.3em;">THE BIGGEST <span style="color: turquoise;">SALE</span></h3>
+				<p style="color: #ffb900; letter-spacing: 10px; font-weight: 600; font-size: 150%; margin-bottom: 1.0em;">Special for today</p>
+				<a href="#" class="btn" style="background-color: turquoise; margin-bottom: 11em;">Shop Now</a>
+            </div>   
+          </div>
+          
+          <div class="carousel-item">
+            <img src="banner2.jpg" width="100%" height="auto">
+            <div class="carousel-caption">
+                <h3 style="color: white; font-family: 'Open Sans', sans-serif; letter-spacing: 10px; font-weight: 700; font-size: 350%; margin-bottom: 0.3em;">SUMMER <span style="color: turquoise;">COLLECTION</span></h3>
+                <p style="color: #ffb900; letter-spacing: 10px; font-weight: 600; font-size: 150%; margin-bottom: 1.0em;">New Arrivals On Sale</p>
+                <a href="#" class="btn" style="background-color: turquoise; margin-bottom: 11em;">Shop Now</a>
+            </div>   
+          </div>
+          
+          <div class="carousel-item">
+            <img src="banner3.jpg" width="100%" height="auto">
+            <div class="carousel-caption">
+                <h3 style="color: white; font-family: 'Open Sans', sans-serif; letter-spacing: 10px; font-weight: 700; font-size: 350%; margin-bottom: 0.3em;">The Biggest <span style="color: turquoise;">Sale</span></h3>
+                <p style="color: #ffb900; letter-spacing: 10px; font-weight: 600; font-size: 150%; margin-bottom: 1.0em;">Special for today</p>
+                <a href="#" class="btn" style="background-color: turquoise; margin-bottom: 11em;">Shop Now</a>
+            </div>   
+          </div>
+
+          <div class="carousel-item">
+            <img src="banner4.jpg" width="100%" height="auto">
+            <div class="carousel-caption">
+                <h3 style="color: white; font-family: 'Open Sans', sans-serif; letter-spacing: 10px; font-weight: 700; font-size: 350%; margin-bottom: 0.3em;">Summer <span style="color: turquoise;">Collection</span></h3>
+				<p style="color: #ffb900; letter-spacing: 10px; font-weight: 600; font-size: 150%; margin-bottom: 1.0em;">New Arrivals On Sale</p>
+				<a href="#" class="btn" style="background-color: turquoise; margin-bottom: 11em;">Shop Now</a>
+            </div>   
+          </div>
+
+          <div class="carousel-item">
+            <img src="banner5.jpg" width="100%" height="auto">
+            <div class="carousel-caption">
+                <h3 style="color: white; font-family: 'Open Sans', sans-serif; letter-spacing: 10px; font-weight: 700; font-size: 350%; margin-bottom: 0.3em;">The Biggest <span style="color: turquoise;">Sale</span></h3>
+				<p style="color: #ffb900; letter-spacing: 10px; font-weight: 600; font-size: 150%; margin-bottom: 1.0em;">Special for today</p>
+				<a href="#" class="btn" style="background-color: turquoise; margin-bottom: 11em;">Shop Now</a>
+            </div>   
+          </div>
+          
+        </div>
+        
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+      
+    <br>
+    <br>
+    <br>
+
+	<div class="container">
+        <div class="row">
+                <div class="col-md-6">
+                    <img src="bottom1.jpg" alt=" " class="img-responsive" style="width: 100%; height: auto;">
+                    <h3><span>F</span>all Ahead</h3>
+                    <p>New Arrivals</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="bottom2.jpg" alt=" " class="img-responsive" style="width: 100%; height: auto;">
+                    <h3><span>F</span>all Ahead</h3>
+                    <p>New Arrivals</p>
+                </div>
+        </div> 
+    </div> 	
+    
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="mid.jpg" alt="" class="img-responsive">
+            </div>
+
+            <div class="col-md-6" style="background-color: turquoise;">
+                <div class="container">
+                    <h3>SAVE UP TO <span>50%</span> IN THIS WEEK</h3>
+                    <p>Suspendisse varius turpis efficitur erat laoreet dapibus. 
+                        Mauris sollicitudin scelerisque commodo.Nunc dapibus mauris sed metus finibus posuere.</p>
+                    <div class="col-md-4 w3l_schedule_bottom_right_grid1">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                        <h4>Customers</h4>
+                        <h5 class="counter">653</h5>
+                    </div>
+                    <div class="col-md-4 w3l_schedule_bottom_right_grid1">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                        <h4>Events</h4>
+                        <h5 class="counter">823</h5>
+                    </div>
+                    <div class="col-md-4 w3l_schedule_bottom_right_grid1">
+                        <i class="fa fa-shield" aria-hidden="true"></i>
+                        <h4>Awards</h4>
+                        <h5 class="counter">45</h5>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <h2>WHAT'S TRENDING</h2>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container px-4">
+        <div class="row gx-5">
+            <div class="col-md-5 ">
+                <div class="p-1" style="padding-top: 50px;">
+                    <img src="bb1.jpg" style="width: 100%; height: 100%;">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="p-1">
+                    <img src="bottom3.jpg" style="width: 100%; height: 100%;">
+                </div>
+                <div class="p-1">
+                    <img src="bottom4.jpg" style="width: 100%; height: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="bot_1.jpg" style="width: 100%; height: 100%;">
+                Flat 50% offer
+            </div>
+            <div class="col-md-6">
+                <img src="bot_2.jpg" style="width: 100%; height: 100%;">
+                Flat 50% offer
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <h2>NEW ARRIVALS</h2>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-link btn-block text-decoration-none text-dark showSingle" id="autoClickBtn" id target="1"><h5>MEN'S</h5></button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-link btn-block text-decoration-none text-dark showSingle" target="2"><h5>WOMAN'S</h5></button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-link btn-block text-decoration-none text-dark showSingle" target="3"><h5>BAGS</h5></button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-link btn-block text-decoration-none text-dark showSingle" target="4"><h5>FOOTWEAR</h5></button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container targetDiv" id="div1">
+        <div class="row">
+            <div class="container men">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m1.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Formal Blue Shirt</h6>
+                                <div class="card-text">$45.99    
+                                    <del>$69.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m2.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Gabi Full Sleeve Sweatshirt</h6>
+                                <div class="card-text">$45.99    
+                                     <del>$69.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m3.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Dark Blue Track Pants</h6>
+                                <div class="card-text">$45.99    
+                                     <del>$69.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m4.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Round Neck Black T-Shirt</h6>
+                                <div class="card-text">$190.99
+                                    <del>$159.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="container">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m5.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Men's Black Jeans</h6>
+                                <div class="card-text">$60.99    
+                                    <del>$90.71</del>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m6.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Reversible Belt</h6>
+                                <div class="card-text">$30.99    
+                                     <del>$50.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m7.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Analog Watch</h6>
+                                <div class="card-text">$160.99    
+                                     <del>$290.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="m8.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Party Men's Blazer</h6>
+                                <div class="card-text">$260.99
+                                    <del>$390.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container targetDiv" id="div2">
+        <div class="row">
+            <div class="container women">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w1.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">A-line Black Skirt</h6>
+                                <div class="card-text">$130.99    
+                                    <del>$189.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w2.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Sleeveless Solid Blue Top</h6>
+                                <div class="card-text">$140.99    
+                                     <del>$189.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w3.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Skinny Jeans</h6>
+                                <div class="card-text">$150.99    
+                                     <del>$189.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w4.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Black Basic Shorts</h6>
+                                <div class="card-text">$120.99
+                                    <del>$189.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="container">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w5.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Pink Track Pants</h6>
+                                <div class="card-text">$220.99    
+                                    <del>$389.71</del>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w6.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Analog Watch</h6>
+                                <div class="card-text">$320.99    
+                                     <del>$489.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w7.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Ankle Length Socks</h6>
+                                <div class="card-text">$100.99    
+                                     <del>$159.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="w8.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Reebok Women's Tights</h6>
+                                <div class="card-text">$130.99
+                                    <del>$169.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container targetDiv" id="div3">
+        <div class="row">
+            <div class="container bag">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b1.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Laptop Messenger Bag</h6>
+                                <div class="card-text">$140.99    
+                                    <del>$169.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b2.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Puma Backpack</h6>
+                                <div class="card-text">$127.99    
+                                     <del>$169.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b3.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Laptop Backpack</h6>
+                                <div class="card-text">$120.99    
+                                     <del>$189.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b4.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Travel Duffel Bag</h6>
+                                <div class="card-text">$190.99
+                                    <del>$259.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="container">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b5.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Hand-held Bag</h6>
+                                <div class="card-text">$190.99    
+                                    <del>$259.71</del>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b6.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Butterflies Bag</h6>
+                                <div class="card-text">$190.99    
+                                     <del>$259.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b7.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Costa Swiss Bag</h6>
+                                <div class="card-text">$290.99    
+                                     <del>$359.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="b8.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Noble Designs Bag</h6>
+                                <div class="card-text">$120.99
+                                    <del>$159.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container targetDiv" id="div4">
+        <div class="row">
+            <div class="container footwear">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s1.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Running Shoes</h6>
+                                <div class="card-text">$80.99    
+                                    <del>$89.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s2.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Shoetopia Lace Up</h6>
+                                <div class="card-text">$90.99    
+                                     <del>$159.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s3.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Steemo Casuals(Black)</h6>
+                                <div class="card-text">$90.99    
+                                     <del>$159.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s4.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Benetton Flip Flops</h6>
+                                <div class="card-text">$40.99
+                                    <del>$99.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="container">
+                <div class="card-deck">
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s5.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Moonwalk Bellies</h6>
+                                <div class="card-text">$80.99    
+                                    <del>$99.71</del>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s6.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Aero Canvas Loafers</h6>
+                                <div class="card-text">$120.99    
+                                     <del>$199.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s7.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Sparx Sporty Canvas Shoes</h6>
+                                <div class="card-text">$160.99    
+                                     <del>$199.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card text-center col-md-3">
+                        <div class="card-block">
+                            <img src="s8.jpg" style="height: auto; width: 100%;">
+                            <div class="card-body">
+                                <h6 class="card-title">Women BLACK Heels</h6>
+                                <div class="card-text">$180.99
+                                    <del>$199.71</del>
+                                </div>
+                                <div>
+                                    <a href="#" class="stretched-link btn" style="background-color: turquoise;">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="backgr col-md-12 text-center">
+                <h4 style="color: white; letter-spacing: 5px; font-weight: 700; font-size: 350%; padding-top: 2em; margin-bottom: 0.5em;">We Offer Flat <span style="color: turquoise;">40%</span> Discount</h4>
+                <a href="#" class="btn" style="background-color: turquoise;">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="pi">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div style="padding-left: 100px;">
+                    <h6 style="letter-spacing: 2px; color: #2fdab8; font-weight: 500; font-size: 100%;">FREE SHIPPING</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="pi">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <div style="padding-left: 100px;">
+                    <h6 style="letter-spacing: 2px; color: #2fdab8; font-weight: 500; font-size: 100%;">24/7 SUPPORT</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="pi">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div style="padding-left: 100px;">
+                    <h6 style="letter-spacing: 2px; color: #2fdab8; font-weight: 500; font-size: 100%;">MONEY BACK GUARANTEE</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="pi">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div>
+                <div style="padding-left: 100px;">
+                    <h6 style="letter-spacing: 2px; color: #2fdab8; font-weight: 500; font-size: 100%;">FREE GIFT COUPONS</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="footer" style="background-color: black; color: white;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3" style="padding: 50px;">
+                    <h3><a class="text-decoration-none" style="font-weight: 700; font-family: 'Open Sans', sans-serif; padding: 10px; letter-spacing: 3px; color: white;" href="#"><span style="background: #2fdab8; padding: 0 10px; font-weight: bold; color: #fff;">E</span>lite Shoppy </a></h3>
+			        <p style="color: #737070; padding: 11px; line-height: 2em; font-size: 14px; letter-spacing: 1px;">Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
+                    <ul class="social-nav model-3d-0 footer-social w3_agile_social" style="padding-left: 11px; margin-top: -25px;">
+                        <li><a href="#" class="facebook">
+                            <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
+                        </li>
+                        <li><a href="#" class="twitter"> 
+                            <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
+                        </li>
+                        <li><a href="#" class="instagram">
+                            <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a>
+                        </li>
+                        <li><a href="#" class="pinterest">
+                            <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3" style="padding-top: 50px;">
+                    <h3><a class="text-decoration-none" style="font-weight: 200; font-family: 'Open Sans', sans-serif; padding: 2px; letter-spacing: 3px; color: white;" href="#"><span style="padding: 0 5px; font-weight: bold; color: #fff;">OUR</span>INFORMATION</a></h3>
+			        <ul class="nav navbar-nav">
+                        <li><a href="#" style="color: #737070; text-decoration: none; padding-left: 25px; padding-top: 15px;">Home</a></li>
+                        <li><a href="#" style="color: #737070; text-decoration: none; padding-left: 25px;">Men's wear</a></li>
+                        <li><a href="#" style="color: #737070; text-decoration: none; padding-left: 25px;">Woman's wear</a></li>
+                        <li><a href="#" style="color: #737070; text-decoration: none; padding-left: 25px;">About</a></li>
+                        <li><a href="#" style="color: #737070; text-decoration: none; padding-left: 25px;">Short Codes</a></li>
+                        <li><a href="#" style="color: #737070; text-decoration: none; padding-left: 25px;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3" style="padding-top: 50px;">
+                    <h3><a class="text-decoration-none" style="font-weight: 200; font-family: 'Open Sans', sans-serif; padding: 2px; padding-bottom: 10px; letter-spacing: 3px; color: white;" href="#"><span style="padding: 0 5px; font-weight: bold; color: #fff;">STORE</span>INFORMATION</a></h3>
+			        <div style="padding-top: 10px;">
+                        <div class="ad">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h6>Phone Number</h6>
+                            <p style="color: #737070; padding-left: 50px;">+1 234 567 8901</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ad">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h6>Email Address</h6>
+                            <p style="color: #737070; padding-left: 50px;">Email :<a style="color: #2fdab8; text-decoration: none;" href="mailto:example@email.com"> mail@example.com</a></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ad">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h6>Location</h6>
+                            <p style="color: #737070; padding-left: 50px;">Broome St, NY 10002,California, USA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="padding-top: 50px;">
+                    <h3><a class="text-decoration-none" style="font-weight: 200; font-family: 'Open Sans', sans-serif; padding: 2px; letter-spacing: 3px; color: white;" href="#"><span style="padding: 0 5px; font-weight: bold; color: #fff;">FLICKR</span>POSTS</a></h3>
+			        <div class="container">
+                        <div class="row">
+                            <div class="col-md-4"><img src="t1.jpg" class="img-thumbnail img-responsive"></div>  
+                            <div class="col-md-4"><img src="t2.jpg" class="img-thumbnail img-responsive"></div> 
+                            <div class="col-md-4"><img src="t3.jpg" class="img-thumbnail img-responsive"></div> 
+                            <div class="col-md-4"><img src="t4.jpg" class="img-thumbnail img-responsive"></div>  
+                            <div class="col-md-4"><img src="t1.jpg" class="img-thumbnail img-responsive"></div>  
+                            <div class="col-md-4"><img src="t2.jpg" class="img-thumbnail img-responsive"></div> 
+                            <div class="col-md-4"><img src="t3.jpg" class="img-thumbnail img-responsive"></div>
+                            <div class="col-md-4"><img src="t2.jpg" class="img-thumbnail img-responsive"></div>
+                            <div class="col-md-4"><img src="t4.jpg" class="img-thumbnail img-responsive"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="padding-left: 50px;">SIGN UP FOR NEWSLETTER !</h2>
+                </div>
+                <div class="col-md-6">
+                    <form action="#" method="post">
+                        <input type="email" class="bg-dark text-light" style="width: 70%; padding: 10px;" placeholder="Enter your email..." name="email" required="">
+                        <input type="submit" style="background-color: #2fdab8; border: transparent; padding: 10px;" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="text-center">
+                <p class="copy-right" style="color: #737070;">&copy 2017 Elite shoppy. All rights reserved | Design by <a class="text-decoration-none text-light" href="http://w3layouts.com/">W3layouts</a></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

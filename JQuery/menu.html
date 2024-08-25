@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+
+            $("#flip").click(function(){
+                $("#panel").slideToggle();
+            });
+            
+            $("#flip2").click(function(){
+                $("#panel2").slideToggle();
+                $("#panel21").slideToggle();
+            });
+
+            $("#flip3").click(function(){
+                $("#panel3").slideToggle();
+                $("#panel31").slideToggle();
+                $("#panel32").slideToggle();
+            });
+    
+        });
+    
+    </script>
+    <style> 
+
+        #flip {
+            padding: 15px;
+            text-align: center;
+            background-color: turquoise;
+            width:30%;
+        }
+
+        #flip2 {
+            padding: 15px;
+            text-align: center;
+            background-color: teal;
+            width:30%;
+        }
+
+        #flip3 {
+            padding: 15px;
+            text-align: center;
+            background-color: teal;
+            width:30%;
+        }
+
+        #panel2 {
+            padding: 15px;
+            text-align: center;
+            background-color: turquoise;
+            width:30%;
+            display: none;
+        }
+
+        #panel21 {
+            padding: 15px;
+            text-align: center;
+            background-color: turquoise;
+            width:30%;
+            display: none;
+        }
+
+        #panel3 {
+            padding: 15px;
+            text-align: center;
+            background-color: turquoise;
+            width:30%;
+            display: none;
+        }
+
+        #panel31 {
+            padding: 15px;
+            text-align: center;
+            background-color: turquoise;
+            width:30%;
+            display: none;
+        }
+
+        #panel32 {
+            padding: 15px;
+            text-align: center;
+            background-color: turquoise;
+            width:30%;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+ 
+    <div id="flip">Link 1</div>
+
+    <div id="flip2">Link 2</div>
+    <div id="panel2">Submenu link 1</div>
+    <div id="panel21">Submenu link 2</div>
+    
+    <div id="flip3">Link 3</div>
+    <div id="panel3">Submenu link 1</div>
+    <div id="panel31">Submenu link 2</div>
+    <div id="panel32">Submenu link 3</div>
+
+</body>
+</html>

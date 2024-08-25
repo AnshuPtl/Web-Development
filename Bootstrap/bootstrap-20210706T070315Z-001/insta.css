@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fafafa!important;
+}
+.container{
+    margin-top: 20px;
+}
+.right-column{
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    width: 350px;
+    margin: 10px;
+    padding: 10px 40px;
+}
+.instagram-logo{
+    margin: 15px auto;
+    width: 190px;
+}
+::placeholder{
+    color: #999;
+    
+} 
+button img{
+    height: 18px !important;
+    padding: 0 8px 2px;
+}
+h6{
+    font-weight: 600;
+    font-size: 17px;
+    color: #999;
+    margin-top: -10px;
+    margin-bottom: 18px;
+}
+.fb{
+    color: #4267B2;
+    border: none;
+}
+.fb:hover{
+    color: #4267B2;
+    border: none;
+}
+.or{
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+}
+.or::before{
+    content: '';
+    background: #efefef;
+    display: block;
+    height: 2px;
+    width: 115px;
+    position: relative;
+    top: 11px;
+
+}
+.or::after{
+    content: '';
+    background: #efefef;
+    display: block;
+    height: 2px;
+    width: 115px;
+    position: relative;
+    bottom: 10px;
+    left: 150px;
+}
+.form-group{
+    margin-bottom: 6px;
+}
+.form-control{
+    background: #fafafa;
+    border: 1px solid #efefef;
+    font-size: 12px;
+}
+.btn{
+    margin: 12px auto;
+    padding: 2px;
+    font-weight: 600;
+}
+.btnf{
+    border: 1px solid transparent;
+}
+a{
+    font-size: small;
+    color: #262626;
+    display: inline-block;
+}
+a:hover{
+    text-decoration: none;
+    color: #262626;
+}
+.p3{
+    color: #999;
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.b1{
+    font-weight: 600;
+}
+.p1{
+    color: #262626;
+    font-size: 14px;
+    margin: 15px;
+    text-align: center
+}
+.sign{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: #0095f6;
+}
+.sign:hover{
+    color: #0095f6;
+}
+.p2{
+    color: #262626;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 20px 175px 17px 0px;
+}
+.appleimg{
+    height: 40px;
+    margin-left: -200px;
+}
+.googleimg{
+    height: 40px;
+    margin-left: -20px;
+}

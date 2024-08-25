@@ -1,0 +1,85 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  td {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border: 1px solid black;
+  }
+
+  div {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 80px;
+    cursor: move;
+  }
+
+
+    .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    }
+
+    .box {
+    cursor: move;
+    }
+
+    .box.over {
+    border: 3px dotted #000000;
+    }
+
+    [draggable] {
+    user-select: none;
+    }
+
+  #box100 {
+    background-color: red;
+  }
+
+  #box200 {
+    background-color: orange;
+  }
+
+  #box300 {
+    background-color: yellow;
+  }
+
+  #box400 {
+    background-color: green;
+  }
+
+  #box500 {
+    background-color: blue;
+  }
+
+  #box600 {
+    background-color: indigo;
+  }
+
+  #box700 {
+    background-color: violet;
+  }
+
+  #box800 {
+    background-color: pink;
+  }
+
+  #box900 {
+    background-color: brown;
+  }
+
+  .btn{
+    font-size: large;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(47, 217, 61);
+    border: 0;
+    border-radius: 20%;
+  }

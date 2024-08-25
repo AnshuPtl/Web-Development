@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function callbybutton()
+        {
+            var a=document.getElementById('value1').value;
+            var b=document.getElementById('value2').value;
+            var sum=+a + +b;
+            var multi=a*b;
+            var div=a/b;
+            var min=a-b;
+            document.getElementById('test1').innerHTML=sum;
+            document.getElementById('test2').innerHTML=multi;
+            document.getElementById('test3').innerHTML=div;
+            document.getElementById('test4').innerHTML=min;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="value1"><br>
+    <input type="text" id="value2"><br>
+    <input type="submit" onclick="callbybutton()"><br>
+
+    <p>Sum of above values: <span id="test1"></span></p>
+    <p>Multiplication of above values: <span id="test2"></span></p>
+    <p>Division of above values: <span id="test3"></span></p>
+    <p>Minus of above values: <span id="test4"></span></p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$(".mybtn").click(function(){
+				$("p").hide();
+				$(this).hide();
+			})
+		
+			$(".btn1").click(function(){
+				$(".myclass").hide();
+			})
+		
+			$("#btn2").click(function(){
+				$("#myid").hide();
+			})
+		
+			$("#btn3").click(function(){
+				$("this").hide();
+			})
+		});
+	</script>
+	
+	<p>Hi how are you</p>
+	<p>Hi how are you</p>
+	<p>Hi how are you</p>
+	<button class="mybtn">Hide Element</button>
+	
+	<br>
+	<br>
+	
+	<div class="my class">
+	what is Lorem Ipsum?
+	</div>
+	
+	<button class="btn1">Hide class</button>
+	
+	<br>
+	<br>
+	
+	<div id="btn2">
+	</div>
+	
+</body>
+</html>
+	

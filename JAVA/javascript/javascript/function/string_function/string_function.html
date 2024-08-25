@@ -1,0 +1,157 @@
+<!--
+String Methods and Properties
+-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+
+<script>
+
+
+/*
+// The length property returns the length of a string:
+
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+document.getElementById("demo").innerHTML = sln;
+
+*/
+
+
+/*
+// The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+document.getElementById("demo").innerHTML = pos;
+
+*/
+
+/*
+// The lastIndexOf() method returns the position of the last occurrence of a specified text:
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");
+document.getElementById("demo").innerHTML = pos;
+
+//The indexOf() method accepts a second parameter as the starting position for the search:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate",15);
+document.getElementById("demo").innerHTML = pos;
+
+*/
+
+/*
+// The search() method returns the position of the first occurrence of a specified text in a string:
+//The search() method cannot take a second start position argument.
+//The indexOf() method cannot take powerful search values (regular expressions).
+
+
+
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+document.getElementById("demo").innerHTML = pos;
+*/
+
+/*
+//Extracting String Parts
+//There are 3 methods for extracting a part of a string:
+
+//slice(start, end)
+//substring(start, end)
+//substr(start, length)
+
+// The slice() method extract a part of a string and returns the extracted parts in a new string:
+
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7,13);
+var res = str.slice(7);
+var res = str.slice(-12); //or, counting from the end:
+document.getElementById("demo").innerHTML = res; 
+*/
+
+
+/*
+//The replace() method replaces a specified value with another value in a string:
+
+ var str = document.getElementById("demo").innerHTML; 
+  var txt = str.replace("Microsoft","W3Schools");  // only fisrt replace
+   var txt = str.replace(/MICROSOFT/i,"W3Schools"); //To replace case insensitive, use a regular expression with an /i flag (insensitive):
+   var txt = str.replace(/Microsoft/g,"W3Schools"); //To replace all matches, use a regular expression with a /g flag (global match):
+  document.getElementById("demo").innerHTML = txt;
+}
+
+*/
+
+/*
+// A string is converted to upper case with toUpperCase():  /A string is converted to lower case with toLowerCase():
+
+function myFunction() {
+  var text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.toUpperCase();
+}
+
+function myFunction() {
+  var text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.toLowerCase();
+}
+
+*/
+
+/*
+// concat() joins two or more strings:
+
+var text1 = "Hello";
+var text2 = "World!";
+var text = "Hello" + " " + "World!"; // also use this
+var text3 = text1.concat(" ",text2);
+
+document.getElementById("demo").innerHTML = text3;
+
+*/
+
+/*
+// The trim() method removes whitespace from both sides of a string:
+
+function myFunction() {
+  var str = "     Hello World!     ";
+  alert(str.trim());
+}
+
+*/
+
+/*
+// ECMAScript 2017 added two String methods: padStart and padEnd to support padding at the beginning and at the end of a string.
+
+let str = "5";
+str = str.padStart(4,0);
+document.getElementById("demo").innerHTML = str;
+
+*/
+
+/*
+// A string can be converted to an array with the split() method:
+
+function myFunction() {
+  var str = "a,b,c,d,e,f";
+  txt.split(",");          // Split on commas
+  txt.split(" ");          // Split on spaces
+  txt.split("|");          // Split on pipe
+  document.getElementById("demo").innerHTML = arr[2];
+}
+*/
+
+
+
+</script>
+
+</body>
+</html>
+

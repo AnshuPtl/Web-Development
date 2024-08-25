@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload = "myfun">
+    <div class="container">
+        <p id="name1" onclick="myfun1();">This is paragraph 1</p>
+        <p id="name2" onmouseover="myfun2();">This is paragraph 2</p>
+        <p id="name3" onmouseout="myfun3();">This is paragraph 3</p>
+        
+        <form>
+            <select id="browsers" onchange="preferedBrowser()">
+                <option value="TOR">TOR</option>
+                <option value="EDGE">EDGE</option>
+                <option value="BRAVE">BRAVE</option>
+            </select>
+        </form>
+    </div>
+    <script>
+        function myfun(){
+            alert("Page is Loaded");
+        }
+        function myfun1(){
+            let name1 =document.getElementById('name1');
+            name1.innerHTML = '<p> You have clicked on the paragraph </P>'
+        }
+        function myfun2(){
+            let name2 = document.getElementById('name2');
+            name2.innerHTML = '<p> You have hover on the paragraph2 </P>'
+        }
+        function myfun3(){
+            let name3 = document.getElementById('name3');
+            name3.innerHTML = '<p> You have mouseout on the paragraph3 </P>'
+        }
+    </script>
+</body>
+</html>

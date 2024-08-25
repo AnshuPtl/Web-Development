@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>   
+      <script type = "text/javascript">
+         
+		  
+		 
+		 var a=10;
+		 var b=20;
+		 var sum=a+b;
+		 document.write ("sum of a & b are : " + sum);
+		
+		
+		 // simple function
+		
+		 function sayHello() 
+		 {
+			var a=10;
+			 var b=20;
+			 var sum=a+b;
+			 document.write ("sum of a & b are : " + sum);
+		 }
+		 sayHello() ;
+		 sayHello() ;
+		 sayHello() ;
+		 
+		 
+		 
+		 // function with argument/parameters
+		 function display(a,b) 
+		 {
+			 var sum=a+b;
+			 document.write ("sum of a & b are : " + sum +"<br>");
+		 }
+		 display(3,5);
+		 display(30,50);
+		 display(0,50);
+		 
+		
+		// return use for return value not print so after call function answer store in function
+		
+		function sayHello() 
+		 {
+			 var a=10;
+			 var b=20;
+			 var sum=a+b;
+			 return sum;
+		 }
+		  document.write(sayHello());
+		
+		
+		
+		
+		function callbybutton() 
+		 {
+			 var a=document.getElementById('value1').value;
+			 var b=document.getElementById('value2').value;
+			 var sum=+a + +b;
+			 var multi=a*b;
+			 document.getElementById('test1').innerHTML=sum;
+			 document.getElementById('test2').innerHTML=multi;
+		 }
+		
+		
+      </script>
+      
+   </head>
+   
+   <body>
+      
+         <input type="text" id="value1"><br>
+		 <input type="text" id="value2"><br>
+		 <input type="submit" onclick="callbybutton()"><br>
+		 
+		 
+		 <p>Sum of above values : <span id="test1"></span></p>
+		 <p>Multiplication of above values : <span id="test2"></span></p>
+		
+         
+   </body>
+</html>
